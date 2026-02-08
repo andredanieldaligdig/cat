@@ -1,0 +1,92 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  margin: 0;
+}
+
+#game {
+  position: relative;
+  width: 700px;
+  height: 300px;
+  background-color: #87CEEB; /* sky blue */
+  border: 60px solid #ffffff;
+  overflow: hidden;
+}
+
+
+#player {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 50px;  /* bigger */
+  height: 50px; /* bigger */
+  image-rendering: pixelated;
+  background-color: transparent;
+  display: block;
+}
+
+#obstacle {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width: 80px;  /* bigger */
+  height: 50px; /* bigger */
+  image-rendering: pixelated;
+  background-color: transparent;
+  display: block;
+}
+
+
+
+#player, #obstacle {
+  image-rendering: pixelated;
+}
+
+#score, #highscore {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: monospace;
+  font-size: 16px;
+  color: black; 
+  z-index: 10;  
+}
+
+
+.cloud {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  background: #fff; /* strong white */
+  border-radius: 50%;
+  opacity: 1; /* fully opaque */
+  z-index: 1; /* behind score */
+}
+
+
+
+#highscore {
+  top: 30px;
+  color: black;
+}
+#gameover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 15px 25px;
+  font-family: monospace;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
